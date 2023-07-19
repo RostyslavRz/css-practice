@@ -1,265 +1,30 @@
-/* :root {
-    background:white;
+.card>p {
+    color:hsla(127, 100%, 63%, 0.6);
 }
 
-* {
-    color:black;
+p:focus,
+p:active,
+p:hover {
+    direction:rtl;
 }
 
-h1 {
-    background:blue;
+#test {
+    color:inherit;
+    -webkit-text-fill-color: inherit;
+    -webkit-text-stroke: inherit;
+
+    writing-mode:vertical-rl
 }
 
-.green {
-    color:green;
+span {
+    text-align: center;
+    text-transform: uppercase;
+
+    text-decoration: underline dotted red;
 }
 
-#blue {
-    color:blue;
-}
-
-section div.box {
-    background:green;    
-}
-div.box p {
-    background:red;
-}
-
-.brown {
-    background: brown;
-    color: white;
-}
-
-ul>li {
-    background:red;
-}
-
-button.header-button+span {
-    background:red;
-}
-
-.susid~p {
-    background:blue;
-    color:white;
-}
-
-.salo, #bread {
-    background:yellow;
-}
-
-.first-task ul li:first-child {
-    color:white;
-}
-
-.second-task ul:first-child li:first-child {
-    color:yellow;
-}
-
-.third-task ul:last-child li:first-child {
-    background:yellow;
-}
-
-.four-task ul li:last-child {
-    background:yellow;
-}
-
-.five-task ul:last-child li:last-child {
-    color:white;
-}
-
-.only-child-task div:only-child {
-    color:red;
-}
-
-.seven-task p:first-of-type {
-    background:red;
-}
-
-.eight-task p:last-of-type {
-    background:red;
-}
-
-.nine-task div p:only-of-type {
-    background:yellow;
-}
-
-.lesson-three-task-one a[href] {
-    color:white;
-}
-
-.lesson-three-task-two li[value="1"] {
-    color:yellow;
-}
-
-.lesson-three-task-three li[value="3"] {
-    background:red;
-}
-
-.lesson-three-task-four button[class~="primary"] {
-    background:blue;
-}
-
-.lesson-three-task-five button[class|="secondary"] {
-    background:red;
-}
-
-.lesson-three-task-six li[class^="b"] {
-    background:white;
-    color:green;
-}
-
-.lesson-three-task-seven li[class*="on"] {
-    background:white;
-    color:green;
-}
-
-.lesson-three-task-eight span[class$="s"] {
-    background:white;
-    color:blue;
-}
-
-.lesson-three-task-nine h2::first-letter {
-    color:red;
-}
-
-.lesson-three-task-ten p:first-child::first-line {
-    background:yellow;
-}
-
-.lesson-three-task-eleven input::placeholder {
-    background:red;
-}
-
-.lesson-three-task-twelve li::before {
-    content:"➤";
-}
-
-.lesson-three-task-thirteen li::after {
-    content:"➤";
-} */
-.card-dark {
-    background:#dddcdc;
-}
-
-.input-dark {
-    background:#8d8b8b;
-}
-
-.input-dark[required] {
-    background:#dadd13;
-}
-
-p:empty {
-    height:10px;
-    background:red;
-}
-
-.small-image[alt~='small'] {
-    height:200px;
-}
-
-a[rel~='external'] {
-    color:brown;
-}
-
-.before-after::before,
-.before-after::after {
-    content: '$$$';
-    color: green;
-    background: red;
-}
-
-button[class^='btn'] {
-    background:peru;
-}
-
-a[class*='small'] {
-    background:yellow;
-}
-
-.btn::first-letter {
-    color:red;
-}
-
-.big-text::first-line {
-    color:orange;
-}
-
-.input-dark::placeholder {
-    color:lime;
-}
-
-#test:target {
-    color:red;
-}
-
-.invite:link {
-    color:red;
-}
-
-.invite:hover {
-    color:orange;
-}
-
-.card:hover {
-    background:green;
-}
-
-.invite:active {
-    color:lime;
-}
-
-input {
-    background-color:grey;
-}
-input:focus {
-    background-color:yellow;
-}
-
-.card:focus-within {
-    background:rosybrown;
-}
-
-.card:lang(en) {
-    background:aquamarine;
-}
-
-button {
-    background-color: greenyellow;
-}
-
-button:enabled {
-    background-color: #16c100;
-}
-
-button:disabled {
-    background-color: aqua;
-}
-
-.inp:read-write {
-    background-color: aqua;
-}
-
-input[type='checkbox']:checked ~ span {
-    background: red;
-}
-
-.ml:valid {
-    background: green;
-}
-
-.ml:invalid {
-    background: goldenrod;
-}
-
-.number:focus {
-    background: grey;
-}
-
-.number:out-of-range {
-    background: red;
-}
-
-.number:in-range {
-    background: blue;
+span:hover {
+    text-decoration-line: line-through;
+    text-decoration-color: blue;
+    text-decoration-style: wavy;
 }
