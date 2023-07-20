@@ -28,3 +28,15 @@ span:hover {
     text-decoration-color: blue;
     text-decoration-style: wavy;
 }
+
+* {
+ font-family: 'Roboto', sans-serif;
+ font-size: 18px;
+
+ font-display: swap;
+}
+
+span {
+    font-size: larger;
+    font-weight: 900;
+}
