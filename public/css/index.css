@@ -40,3 +40,15 @@ span {
     font-size: larger;
     font-weight: 900;
 }
+
+.test {
+    display: none;
+}
+
+.block {
+    display: block;
+    background: rgb(238, 237, 237);
+    margin: auto;
+
+    width: 250px;
+}
