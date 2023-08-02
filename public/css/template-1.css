@@ -92,7 +92,7 @@
     text-align: left;
     max-width: 250px;
     margin: 0 auto;
-    width: 200px;
+    width: 400px;
 
     overflow:auto;
     resize:both;
@@ -179,6 +179,37 @@
  .plans_card:nth-child(2) {
     visibility: hidden;
  }
+ 
+
+ /* .page {
+    background-image: url('/img/test2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-size: cover;
+ } */
+
+ .hero_text {
+    padding: 40px;
+    color:white;
+
+    border-image-source: url('/img/test2.png');
+    border-image-width: 5% 10%;
+    border-image-slice: 5% 10%;
+    border-image-repeat: space;
+}
+
+.card-block {
+    /* list-style-type: decimal; */
+    list-style-position: inside;
+    list-style-image: url('/img/test2.png');
+
+    padding: 0;
+}
+
+.card_description_item {
+    display: list-item;
+}
 
  /* p {
     background: grey;
