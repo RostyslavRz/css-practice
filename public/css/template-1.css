@@ -1,3 +1,6 @@
+:root {
+    --space-medium: 24px;
+}
 .page {
     background: #FFFFFF;
     padding: 0 15px; 
@@ -9,7 +12,7 @@
 }
 
 .header {
-    padding: 24px;
+    padding: var(--space-medium);
     border-bottom: 1px solid #dee2e6;
 }
 
@@ -42,7 +45,7 @@
 }
 
 .nav_inline .nav_link:not(:last-child) {
-    margin-right: 24px;
+    margin-right: var(--space-medium);
 }
 
 .nav_vertical .nav_link:not(:last-child) {
@@ -59,7 +62,7 @@
 }
 
 .footer {
-    padding: 24px 0;
+    padding: var(--space-medium) 0;
     border-top: 1px solid #dee2e6;
 }
 
@@ -104,27 +107,27 @@
 }
 
 .plans_card:not(:last-of-type) {
-    margin-right: 24px;
+    margin-right: var(--space-medium);
 }
 
 .card-header {
     padding: 12px;
     text-align: center;
-    font-size: 24px;
+    font-size: var(--space-medium);
     color:#212529;
 }
 
 .card-body {
-    padding: 24px;
+    padding: var(--space-medium);
 }
 
 .card_block {
  text-align: center;
- margin-bottom: 24px;
+ margin-bottom: var(--space-medium);
 }
 
 .card_block:not(:last-of-type ) {
-    margin-bottom: 24px;
+    margin-bottom: var(--space-medium);
    }
 
 .card_price_amount {
@@ -166,6 +169,7 @@
     box-shadow: 5px 5px 10px 1px rgba(116, 169, 255, 0.254);
 
     cursor: pointer;
+    opacity: 0.4;
  }
 
  .btn {
@@ -209,6 +213,48 @@
 
 .card_description_item {
     display: list-item;
+}
+
+/* .table tr {
+    border: 1px solid #343a40;
+} */
+
+.table tr td {
+    border: 1px solid #4f6983;
+    border-bottom-color: red;
+    border-right-color: blue;
+}
+
+.table {
+    table-layout: fixed;
+    width:600px;
+
+    border-collapse: unset;
+    border-spacing: 20px 10px;
+
+    caption-side: top;
+    empty-cells: hide;
+}
+
+.nav_link::before, .nav_link::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+
+    background-image: url('/img/test2.png');
+}
+.nav_link::before {
+    margin-right: 15px;
+}
+.nav_link::after {
+    margin-left: 15px;
+}
+
+.calc {
+    width:600px;
+
+    margin-left: calc(50% - (600px / 2));
 }
 
  /* p {
