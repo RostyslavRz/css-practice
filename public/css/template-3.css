@@ -135,14 +135,14 @@
     gap: var(--space-l);
 }
 
-.hero-title {
+.hero_title {
     font-size: 50px;
     color: var(--color-title);
     font-weight: var(--weight-title);
     line-height: 120%;
 }
 
-.hero-text {
+.hero_text {
     font-size: var(--space-l);
     color: var(--color-text);
     font-weight: var(--weight-text);
