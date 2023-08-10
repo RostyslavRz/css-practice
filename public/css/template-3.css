@@ -1,3 +1,25 @@
+@keyframes fly {
+    from { 
+        top: 0;
+        left: 0;
+    } 
+    25% {
+        top: 500px;
+        left: 500px;
+        background-color: red;
+    }
+    50% {
+        left: 0;
+        background-color: yellow
+    }
+    to {
+        top: 0;
+        left: 0;
+        background-color: purple;
+    }
+}
+    
+
 :root {
     --space-m: 12px;
     --space-xm: 16px;
@@ -95,6 +117,9 @@
     text-decoration: none;
 
     line-height: 100%;
+
+    transition-property: color;
+    transition-duration: 1s;;
 }
 
 .nav_link:hover {
@@ -197,6 +222,12 @@
     text-decoration: none;
     padding: var(--space-m) var(--space-xm);
     border-radius: var(--border-radius);
+
+    transition: opacity 1s, background-color 1s, color 1s;
+
+   /* равнозначно верхней 1-ой строке
+    transform-origin: color, background-color;
+    transition-duration: 1s; */
 }
 
 .card_button {
@@ -206,6 +237,8 @@
 
 .button:hover {
     opacity: 0.7;
+    background-color: yellowgreen;
+    color: red;
 }
 
 .card_text {
@@ -280,8 +313,17 @@
 }
 
 .modal {
-    position: sticky;
-    top: 24px;
+    animation-name: fly;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0.89, 0.01, 0.91, 0.21);;
+
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.modal {
+    position: fixed;
+    top: 200px;
     left: 200px;
 
     /* height: 100px; */
@@ -293,6 +335,10 @@
     border-radius: 24px;
     line-height: 150%;
     z-index: 2;
+
+    /* transition-property: top;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 }
 
 .modal_image {
