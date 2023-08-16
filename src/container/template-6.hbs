@@ -44,11 +44,11 @@
 
   {{#each list}}
   <div class="msg">
-    <image class="msg_icon" src="http://www.w3.org/2000/svg" alt="32x32">
-      <div class="msg_info">
-        <p class="msg_user">@{{nickname}}</p>
-        <p class="msg_text">{{description}}</p>
-      </div>
+    <div class="msg_icon">32x32</div>
+    <div class="msg_info">
+      <p class="msg_user">@{{nickname}}</p>
+      <p class="msg_text">{{description}}</p>
+    </div>
   </div>
   {{/each}}
 
@@ -60,14 +60,21 @@
 <div class="exp">
   <div class="exp_header">
     <div class="exp_title">{{title}}</div>
-    <div class="exp_badge">{{badge}}</div>
+    <div class="badge">
+      <div class="exp_badge">{{badge}}</div>
+    </div>
   </div>
-  {{#each list}}
+
+
   <div class="list">
-    <strong class="list_title">{{name}}</strong>
-    <p class="list_text">{{details}}</p>
+    {{#each list}}
+    <div>
+      <strong class="list_title">{{name}}</strong>
+      <p class="list_text">{{details}}</p>
+    </div>
+    {{/each}}
   </div>
-  {{/each}}
+
 </div>
 {{/with}}
 

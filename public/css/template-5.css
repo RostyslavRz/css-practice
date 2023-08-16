@@ -213,18 +213,17 @@
 }
 
 .advantages > div {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #e4eaf2;
-    border-radius: var(--border-radius-d);
-    padding: var(--space-l);
-    gap: var(--space-s);
-    /* width: 100%; */
+display: flex;
+flex-direction: column;
+border: 1px solid #e4eaf2;
+border-radius: var(--border-radius-d);
+padding: var(--space-l);
+gap: var(--space-s);
 }
 
 .advantages > div > strong {
     color: var(--color-title);
-    font-size: var(--weight-title);
+    font-weight: var(--weight-title);
     font-size: 18px;
 }
 
