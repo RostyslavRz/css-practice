@@ -1,26 +1,6 @@
 <div class="hdr">
-  <div class="hd_up">
-    <div class="lg">LG</div>
-    <div class="NV">NV</div>
-  </div>
-  <div class="hd_lw">2</div>
+  {{>headerDark}}
 </div>
-
-{{!-- <div class="header">
-  {{#with header}}
-  <div class="logo">
-    <span>{{brandName}}</span>
-  </div>
-
-  <nav class="header_nav">
-    {{#each links}}
-    <div class="nav_line">
-      <a href="url" class="nav_link">{{text}}</a>
-    </div>
-    {{/each}}
-  </nav>
-  {{/with}}
-</div> --}}
 
 <main class="hero">
   {{#with hero}}
@@ -49,21 +29,6 @@
   </div>
 </div>
 
-
-
-
-
-
 <div class="footer">
-  {{#with footer}}
-  {{#each pages}}
-  <div>
-    <a href="{{path}}" class="nav_link">{{name}}</a>
-  </div>
-  {{/each}}
-
-  <div>
-    <a class="footer_copyright">{{copyright}}</a>
-  </div>
-  {{/with}}
+  {{>footerDark}}
 </div>
