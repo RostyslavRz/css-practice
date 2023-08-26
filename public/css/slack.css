@@ -1,8 +1,75 @@
-@layer component, varient;
+@layer normalize, component, varient, main, adaptive;
 
 @font-face {
     font-family: 'HelveticaNeueBold';
     src: url('/font/HelveticaNeueBold.ttf');
+}
+
+@layer component {
+    .page_section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button {
+        text-decoration: none;
+        color: var(--color-black);
+        padding: var(--spacing-3);
+        border-radius: var(--radius-1);
+        text-align: center;
+        border: 1px solid transparent;
+    }
+
+    .click {
+        transition: opacity var(--transition-1);
+    }
+
+    .click:hover {
+        opacity: var(--opacity-1);
+        cursor: pointer;
+    }
+    
+    .click:active {
+        opacity: var(--opacity-2);
+    }
+
+    .icon {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    .double_line {
+        line-height: var(--line-height);
+    }
+}
+
+@layer variant {
+    .button_primary {
+        color: var(--color-white);
+        background-color: var(--color-primary);
+    }
+
+    .button_secondary {
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+        border-width: 2px;
+    }
+
+    .page_section_light {
+        background-color: var(--color-light);
+    }
+
+    .feat_icon {
+        height: 48px;
+        width: 48px;
+    }
+
+    .icon_arrow {
+        height: 14px;
+        width: 24px;
+        background-image: url('/svg/arrow-right.svg');
+    }
 }
 
 body {
@@ -42,17 +109,13 @@ body {
    --opacity-1: 0.7;
    --opacity-2: 0.3;
    --transition-1: 0.7;
+
+   --line-height: 1.5em;
 }
 
+@layer main {
 .page {
     display: grid;
-}
-
-@layer component {
-    .page_section {
-        display: flex;
-        justify-content: center;
-    }
 }
 
 .page_content {
@@ -61,40 +124,21 @@ body {
     padding: var(--spacing-3);
 }
 
-@media all and (1260px <= width) {
-    .page_content {
-        max-width: var(--page-width-big);
-    }
-}
-
-@media all and (1000px <= width < 1260px) {
-    .page_content {
-        max-width: var(--page-width-medium);
-    }
-}
-
-@media all and (width < 1000px) {
-    .page_content {
-        max-width: var(--page-width-small);
-    }
-}
-
 .hero_section {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     gap: 200px;
-    
 
-    height: 60vh;
-    min-height: 680px;
+    min-height: 600px;
 }
 
 .hero {
     height: 100%;
     display: flex;
     align-items: center;
+    margin-top: 50px;
 }
 
 .hero_content {
@@ -108,7 +152,7 @@ body {
 .brands {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     column-gap: var(--spacing-8);
     row-gap: var(--spacing-4);
     flex-wrap: wrap;
@@ -117,7 +161,7 @@ body {
 .hero_image {
     position: absolute;
     left: 580px; 
-    top: calc(50% - 436 / 2);  
+    top: 0;  
 }
 
 .hero_label {
@@ -138,52 +182,15 @@ body {
   gap: var(--spacing-5);
 }
 
-@layer component {
-    .button {
-        text-decoration: none;
-        color: var(--color-black);
-        padding: var(--spacing-3);
-        border-radius: var(--radius-1);
-        text-align: center;
-        border: 1px solid transparent;
-    }
-
-    .click {
-        transition: opacity var(--transition-1);
-    }
-    .click:hover {
-        opacity: var(--opacity-1);
-        cursor: pointer;
-    }
-    .click:active {
-        opacity: var(--opacity-2);
-    }
-}
-
-@layer variant {
-    .button_primary {
-        color: var(--color-white);
-        background-color: var(--color-primary);
-    }
-    .button_secondary {
-        color: var(--color-primary);
-        border-color: var(--color-primary);
-        border-width: 2px;
-    }
-}
-
 .features_section {
     padding-top: 150px;
     padding-bottom: 150px;
 
     display: grid;
     gap: var(--spacing-5);
-}
-
-@layer variant {
-    .page_section_light {
-        background-color: var(--color-light);
-    }
+    background-image: url('/img/features.png');
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 
 .features_title {
@@ -192,6 +199,7 @@ body {
 
 .features_discription {
     font-size: var(--size-2);
+    max-width: 520px;
 }
 
 .feat_card {
@@ -199,28 +207,89 @@ body {
     background-color:var(--color-white);
     display: grid;
     gap: var(--spacing-3);
-}
 
-@layer component {
-    .icon {
-        display: block;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-}
-
-@layer variant {
-    .feat_icon {
-        height: 48px;
-        width: 48px;
-    }
-    .icon_arrow {
-        height: 14px;
-        width: 24px;
-        background-image: url('/svg/arrow-right.svg');
-    }
+    font-size: var(--size-2);
+    
+    grid-template-rows: min-content min-content 1fr min-content;
 }
 
 .feat_link {
    justify-self: flex-end; 
+}
+
+.features_grid_4 {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:var(--spacing-3);
+}
+
+.features_grid_4 > .feat_card:first-of-type {
+    grid-row: 1 / 3;
+}
+}
+
+@layer adaptive {
+    @media all and (1260px <= width) {
+        .page_content {
+            max-width: var(--page-width-big);
+        }
+    }
+    
+    @media all and (1000px <= width < 1260px) {
+        .page_content {
+            max-width: var(--page-width-medium);
+        }
+    
+        .hero_image {
+            left: 518px; 
+            height: 300px;  
+        }
+    }
+    
+    @media all and (width < 1000px) {
+        .page_content {
+            max-width: var(--page-width-small);
+        }
+
+        .hero_image {
+            position: static; 
+            width: 100%; 
+            order: -1; 
+        }
+
+        .hero_content {
+            max-width: 100%;
+        }
+
+        .features_grid_4 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .features_grid_4 > .feat_card:first-of-type {
+            grid-row: 1 / 3;
+        }
+
+        .features_section {
+            background: none;
+        }
+
+    @media all and (width < 600px) {
+        .features_grid_4 {
+            grid-template-columns: 2fr, 1fr;
+        }
+    }
+
+    @media all and (width < 400px) {
+        .features_grid_4 {
+            grid-template-columns: 1fr;
+        }
+
+        .hero_buttons {
+            grid-template-columns: 1fr;
+            gap: var(--spacing-2);
+        }
+    }
+} 
 }
