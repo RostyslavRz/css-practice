@@ -66,14 +66,14 @@
         width: 48px;
     }
 
-    .footer_img {
-        height: 180px;
-    }
-
-    .icon_arrow {
+       .icon_arrow {
         height: 14px;
         width: 24px;
         background-image: url('/svg/arrow-right.svg');
+    }
+
+    .footer_img {
+        height: 180px;
     }
 
     .ft_arrow {
@@ -86,14 +86,13 @@
         color: #1264A3;
         display: flex;
         justify-content: space-between;
-        padding: 12px;
+        padding: var(--spacing-2);
 
     }
 }
 
 body {
     font-family: 'HelveticaNeueBold', sans-serif;
-
     background-color: var(--color-white);
 }
 
@@ -149,7 +148,6 @@ body {
     justify-content: center;
 
     gap: 200px;
-
     min-height: 600px;
 }
 
@@ -166,13 +164,6 @@ body {
     max-width: 425px;
     color: var(--color-black);
     position: relative;
-}
-
-.footer_grid_3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-evenly;
-    gap: 108px;
 }
 
 .brands {
@@ -319,6 +310,13 @@ body {
     align-items: center;
     padding: 80px 100px;
     gap: 40px;
+}
+
+.footer_grid_3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    gap: 108px;
 }
 
 .footer_card {
