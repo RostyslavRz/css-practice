@@ -319,8 +319,10 @@ body {
     align-items: center;
     padding: 80px 100px;
     gap: 40px;
+}
 
-    /*min-height: 600px; */
+.footer_card {
+    height: 100%;
 }
 
 .footer_title {
@@ -335,6 +337,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    height: 50%;
 }
 
 .ftcard_text {
@@ -348,7 +351,9 @@ body {
     line-height: 150%;
     max-width: 95%;
 }
-
+.ftcard_line {
+    margin-top: auto;
+}
 
 }
 
