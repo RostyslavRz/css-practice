@@ -75,6 +75,11 @@ body {
     gap: var(--spacing-5);
 }
 
+.gorizontal {
+    display: grid;
+    gap: var(--spacing-1);
+}
+
 .aside {
     padding: var(--spacing-5);
     background-color: var(--color-background-dark);
@@ -125,6 +130,7 @@ body {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
+    gap: 40px 100px;
 }
 
 .field {
@@ -140,6 +146,13 @@ body {
     border-radius: 16px;
 }
 
+.purchase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: var(--spacing-9) 0;
+}
+
 .analytic {
     border-radius: 8px;
     padding: var(--spacing-5);
@@ -148,6 +161,17 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.analytic-low {
+    border-radius: 8px;
+    padding: var(--spacing-5);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 12px;
 }
 
 .relative {
@@ -185,6 +209,13 @@ body {
     background-color: #f8fafc;
 }
 
+ .header-list {
+    width: 100%;
+    max-width: 133px;
+    display:flex;     
+    gap: var(--spacing-4);
+    justify-content: space-between;
+} 
 .header__icon-search {
     height: 20px;
     width: 20px;
@@ -201,6 +232,13 @@ body {
     right: var(--spacing-2);
 }
 
+.header__icon-nav {
+    height: var(--size-4);
+    width:  var(--size-4);
+    border-radius: var(--radius-1);
+    padding: 4px;  
+}
+
 .field__select {
     position: absolute;
     width: 100%;
@@ -215,6 +253,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
+    gap: var(--spacing-4) var(--spacing-5);
 }
 
 .analytic__button {
@@ -224,6 +263,10 @@ body {
 
 .analytic__title {
     font-size: var(--size-6);
+}
+
+.analytic__title-single {
+    font-size: var(--size-3);
 }
 
 .analytic__arrow {
@@ -305,6 +348,18 @@ body {
     background-color: var(--color-blue-dark);
 }
 
+.icon--color-purple {
+    background-color: var(--color-purple-dark);
+}
+
+.icon--color-yell {
+    background-color: var(--color-yellow-light);
+}
+
+.icon--color-lb {
+    background-color: rgb(206, 239, 240);
+}
+
 .field--select {
     display: flex;
     align-items: center;
@@ -314,8 +369,24 @@ body {
     grid-row: 1 / 3;
 }
 
+.analytic--single-up {
+    grid-row: 1 / 2;
+}
+
+.analytic--single {
+    grid-row: 2 / 3;
+}
+
+.analytic--white {
+    border: 1px solid #E0E4E8;
+}
+
 .analytic--blue {
     background-color: var(--color-blue-light);
+}
+
+.analytic--purple {
+    background-color: var(--color-purple-light);
 }
 }
 
@@ -333,4 +404,11 @@ body {
         display: none;
     }
    }
+
+   /* @media all and (width <760px) {
+    .analytic__block {
+        grid-template-columns: repeat(2, 2fr);
+        
+    }
+   } */
 } 
