@@ -44,16 +44,6 @@
                     <span class="icon nav-button__icon" style="background-image: url('/svg/nav/products.svg')"></span>
                     <span class="text text--light">Products</span>
                 </a>
-                <div class="relative click">
-                    <div class="field relative field--select">
-                        <span class="text text--light">Choose...</span>
-                    </div>
-                    <select class="field__select">
-                        <option value="cat">Cat</option>
-                        <option value="dogt">Dog</option>
-                        <option value="hamster">Hamster</option>
-                    </select>
-                </div>
             </nav>
         </aside>
 
@@ -124,12 +114,139 @@
                     </div>
                 </section>
 
-                <section class="purchase">
-                    <div class="purchase-list">Purchase list</div>
-                    <div class="payment">Payment</div>
-                </section>
             </div>
-        </main>
+
+            <div class="main__second">
+                <div class="box box__purchase">
+                    <div class="text text--heading ">
+                        Purchase list
+                    </div>
+                    <hr class="hr">
+
+                    <div class="purchase">
+                        <div class="purchase__list">
+                            <div class="item-sku text">ID437661</div>
+                            <div class="item-date text">May 11, 2023, 14:21</div>
+                        </div>
+
+                        <div class="purchase__list">
+                            <div class="item-name text">AirOn ProCam</div>
+                            <div class="item-info text">7/8 USB Type-C</div>
+                        </div>
+
+                        <div class="purchase__list">
+                            <div class="item-price text">132.32 EUR</div>
+                            <div class="item-paid text text--warning">Not paid</div>
+                        </div>
+
+                        <div class="purchase__list">
+                            <div class="item-customer text">Customer</div>
+                            <div class="item-mail text">robin@com.de</div>
+                        </div>
+                    </div>
+                    <hr class="hr">
+
+                    <div class="purchase">
+                        <div class="purchase__list">
+                            <div class="item-sku text">ID437661</div>
+                            <div class="item-date text">May 11, 2023, 14:21</div>
+                        </div>
+
+                        <div class="purchase__list">
+                            <div class="item-name text">PHILIPS Essential</div>
+                            <div class="item-info text">HD9200/90</div>
+                        </div>
+
+                        <div class="purchase__list">
+                            <div class="item-price text">543 USD</div>
+                            <div class="item-paid text text--success">Pay by Stripe</div>
+                        </div>
+
+                        <div class="purchase__list">
+                            <div class="item-customer text">Customer</div>
+                            <div class="item-mail text">dima@com.ua</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text text--heading ">
+                        Payment
+                    </div>
+                    <hr class="hr">
+
+                    <div class="form">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="radiopayment" id="flexCreditcard"
+                                checked>
+                            <label for="flexCreditcard" class="form-check-label text">Credit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="radiopayment" id="flexDebitcard">
+                            <label for="flexDebitcard" class="form-check-label text">Debit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="radiopayment" id="flexPaypal">
+                            <label for="flexPaypal" class="form-check-label text">PayPal</label>
+                        </div>
+                    </div>
+
+
+                    <div class="main__form-cc">
+                        <div class="form__block relative click">
+                            <span class="form__cc-name text" id="nameholder">Name on card</span>
+                            <input type="text" name="username" class="form-input">
+                        </div>
+
+                        <div class="form__block relative click">
+                            <span class="form__cc-name text" id="numbercard">Credit card number</span>
+                            <input type="tel" name="number" class="form-input">
+                        </div>
+
+                        <div class="form__block relative click">
+                            <span class="form__cc-name text" id="cardexp">Expiration</span>
+                            <input type="text" name="expiration" class="form-input">
+                        </div>
+
+                        <div class="form__block relative click">
+                            <span class="form__cc-name text" id="cardcvv">CVV</span>
+                            <input type="text" name="cvvcard" class="form-input">
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <fdiv class="main__form-place">
+                        <div class="relative form__block">
+                            <p class="text">Country</p>
+                            <div class="field relative field--select click">
+                                <span class="text">Choose...</span>
+                            </div>
+                            <select class="field__select" name="county">
+                                <option value="de">Germany</option>
+                                <option value="engl">UK</option>
+                                <option value="ukr">Ukraine</option>
+                                <option value="amer">USA</option>
+                            </select>
+                        </div>
+
+                        <div class="relative form__block">
+                            <p class="text">State</p>
+                            <div class="field relative field--select click">
+                                <span class="text">Choose...</span>
+                            </div>
+                            <select class="field__select">
+                                <option value="st1">District 1</option>
+                                <option value="st2">District 2</option>
+                                <option value="st3">District 3</option>
+                                <option value="st4">District 4</option>
+                            </select>
+                        </div>
+                </div>
+                <hr class="hr">
+                <div class="payment__botton">
+                    <a href="#" class="button text click">Continue to checkout</a>
+                </div>
+            </div>
+    </div>
+    </main>
     </div>
 
 </body>
